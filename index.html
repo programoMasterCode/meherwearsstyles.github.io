@@ -1,106 +1,557 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="MeherWearsStyles — affordable Indian fashion finds that look expensive.">
-<title>MeherWearsStyles | Fashion Finds</title>
-<style>
-:root{
-  --ink:#241b20; --muted:#766a70; --bg:#fbf7f6; --card:#fff;
-  --accent:#9a5b69; --accent2:#f0dfe3; --line:#eadfe2;
-}
-*{box-sizing:border-box}
-body{margin:0;background:linear-gradient(180deg,#fbf7f6 0%,#f8f1f2 100%);
-font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink)}
-.wrap{max-width:720px;margin:auto;padding:28px 18px 44px}
-.hero{text-align:center}
-.avatar{width:116px;height:116px;border-radius:50%;object-fit:cover;border:5px solid white;
-box-shadow:0 8px 28px rgba(65,35,45,.12);background:#eadfe2}
-h1{font-family:Georgia,serif;font-size:34px;margin:18px 0 6px;letter-spacing:-.5px}
-.tag{color:var(--muted);font-size:15px;line-height:1.55;margin:0 auto 16px;max-width:520px}
-.social{display:flex;justify-content:center;gap:10px;margin-bottom:28px}
-.social a{color:var(--ink);text-decoration:none;font-size:13px;padding:8px 13px;border:1px solid var(--line);
-border-radius:999px;background:#fff}
-.section-title{font-family:Georgia,serif;font-size:22px;margin:28px 0 12px}
-.card{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);
-border-radius:20px;padding:12px;margin:12px 0;text-decoration:none;color:inherit;
-box-shadow:0 5px 18px rgba(65,35,45,.06);transition:.18s}
-.card:hover{transform:translateY(-2px);box-shadow:0 9px 24px rgba(65,35,45,.10)}
-.thumb{width:76px;height:88px;border-radius:14px;object-fit:cover;background:var(--accent2);flex:none}
-.card h3{margin:0 0 5px;font-size:16px}
-.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.4}
-.arrow{margin-left:auto;font-size:20px;color:var(--accent);padding:0 6px}
-.note{font-size:12px;color:var(--muted);line-height:1.55;text-align:center;margin:28px auto 0;max-width:560px}
-footer{text-align:center;margin-top:28px;font-size:12px;color:#9a8d92}
-.badge{display:inline-block;background:var(--accent2);color:var(--accent);padding:5px 9px;border-radius:999px;
-font-size:11px;font-weight:700;letter-spacing:.3px;margin-bottom:2px}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="MeherWearsStyles — affordable fashion finds that look expensive."
+  >
+
+  <title>MeherWearsStyles | Fashion Finds</title>
+
+  <style>
+    :root {
+      --ink: #241b20;
+      --muted: #766a70;
+      --bg: #fbf7f6;
+      --card: #ffffff;
+      --accent: #9a5b69;
+      --accent-light: #f0dfe3;
+      --line: #eadfe2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: linear-gradient(
+        180deg,
+        #fbf7f6 0%,
+        #f8f1f2 100%
+      );
+
+      font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      color: var(--ink);
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: auto;
+      padding: 28px 18px 44px;
+    }
+
+    /* HERO */
+
+    .hero {
+      text-align: center;
+    }
+
+    .avatar {
+      width: 116px;
+      height: 116px;
+      border-radius: 50%;
+      object-fit: cover;
+
+      border: 5px solid white;
+
+      box-shadow:
+        0 8px 28px rgba(65, 35, 45, 0.12);
+
+      background: var(--accent-light);
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: 34px;
+      margin: 18px 0 6px;
+      letter-spacing: -0.5px;
+    }
+
+    .tag {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.55;
+
+      margin: 0 auto 16px;
+      max-width: 520px;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .social a {
+      color: var(--ink);
+      text-decoration: none;
+
+      font-size: 13px;
+
+      padding: 8px 13px;
+
+      border: 1px solid var(--line);
+      border-radius: 999px;
+
+      background: #fff;
+    }
+
+    /* SECTIONS */
+
+    .section-title {
+      font-family: Georgia, serif;
+      font-size: 22px;
+
+      margin: 28px 0 12px;
+    }
+
+    /* PRODUCT CARDS */
+
+    .card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+
+      background: var(--card);
+
+      border: 1px solid var(--line);
+      border-radius: 20px;
+
+      padding: 12px;
+      margin: 12px 0;
+
+      text-decoration: none;
+      color: inherit;
+
+      box-shadow:
+        0 5px 18px rgba(65, 35, 45, 0.06);
+
+      transition: 0.18s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 9px 24px rgba(65, 35, 45, 0.10);
+    }
+
+    .thumb {
+      width: 76px;
+      height: 88px;
+
+      border-radius: 14px;
+
+      object-fit: cover;
+
+      background: var(--accent-light);
+
+      flex: none;
+    }
+
+    .card-content {
+      flex: 1;
+    }
+
+    .card h3 {
+      margin: 4px 0 5px;
+      font-size: 16px;
+    }
+
+    .card p {
+      margin: 0;
+
+      color: var(--muted);
+
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .badge {
+      display: inline-block;
+
+      background: var(--accent-light);
+      color: var(--accent);
+
+      padding: 5px 9px;
+
+      border-radius: 999px;
+
+      font-size: 11px;
+      font-weight: 700;
+
+      letter-spacing: 0.3px;
+    }
+
+    .arrow {
+      margin-left: auto;
+
+      font-size: 20px;
+
+      color: var(--accent);
+
+      padding: 0 6px;
+    }
+
+    /* DISCLOSURE */
+
+    .note {
+      font-size: 12px;
+
+      color: var(--muted);
+
+      line-height: 1.55;
+
+      text-align: center;
+
+      margin: 28px auto 0;
+
+      max-width: 560px;
+    }
+
+    footer {
+      text-align: center;
+
+      margin-top: 28px;
+
+      font-size: 12px;
+
+      color: #9a8d92;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 480px) {
+
+      .wrap {
+        padding: 24px 14px 36px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .tag {
+        font-size: 14px;
+      }
+
+      .thumb {
+        width: 70px;
+        height: 82px;
+      }
+
+      .card h3 {
+        font-size: 15px;
+      }
+
+      .card p {
+        font-size: 12px;
+      }
+    }
+  </style>
 </head>
+
+
 <body>
-<main class="wrap">
-  <header class="hero">
-    <!-- Replace meher.jpg with your OpenArt character image -->
-    <img class="avatar" src="meher.jpg" alt="Meher from MeherWearsStyles"
-         onerror="this.style.display='none'">
-    <h1>MeherWearsStyles</h1>
-    <p class="tag">Affordable fashion finds that look expensive ✨<br>
-      Kurtis • Dresses • Office wear • Everyday style</p>
-    <div class="social">
-      <!-- Replace with your Instagram URL -->
-      <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram ↗</a>
-    </div>
-  </header>
 
-  <section>
-    <div class="section-title">🛍️ Today's Fashion Find</div>
+  <main class="wrap">
 
-    <!-- Replace # with your Amazon affiliate link -->
-    <a class="card" href="#" target="_blank" rel="sponsored noopener">
-      <img class="thumb" src="product-1.jpg" alt="Featured fashion product"
-           onerror="this.src='https://placehold.co/160x180/f0dfe3/6f4a55?text=Fashion'">
-      <div>
-        <span class="badge">FEATURED</span>
-        <h3>Featured Amazon Find</h3>
-        <p>Add your product name + price here</p>
+    <!-- ========================= -->
+    <!-- MEHER PROFILE -->
+    <!-- ========================= -->
+
+    <header class="hero">
+
+      <!--
+        Put your OpenArt Meher image in the same folder
+        and name it:
+
+        meher.jpg
+      -->
+
+      <img
+        class="avatar"
+        src="meher.jpg"
+        alt="Meher from MeherWearsStyles"
+      >
+
+      <h1>MeherWearsStyles</h1>
+
+      <p class="tag">
+        Affordable fashion finds that look expensive ✨
+        <br>
+        Kurtis • Dresses • Office Wear • Everyday Style
+      </p>
+
+
+      <!-- Instagram -->
+
+      <div class="social">
+
+        <!--
+          CHANGE THIS TO YOUR ACTUAL INSTAGRAM PROFILE
+        -->
+
+        <a
+          href="https://instagram.com/"
+          target="_blank"
+          rel="noopener"
+        >
+          Instagram ↗
+        </a>
+
       </div>
-      <span class="arrow">→</span>
-    </a>
-  </section>
 
-  <section>
-    <div class="section-title">✨ Shop My Picks</div>
+    </header>
 
-    <a class="card" href="#" target="_blank" rel="sponsored noopener">
-      <img class="thumb" src="product-2.jpg" alt="Dresses" onerror="this.src='https://placehold.co/160x180/f0dfe3/6f4a55?text=Dresses'">
-      <div><h3>👗 Dresses</h3><p>Pretty picks for brunch, dates & weekends</p></div>
-      <span class="arrow">→</span>
-    </a>
 
-    <a class="card" href="#" target="_blank" rel="sponsored noopener">
-      <img class="thumb" src="product-3.jpg" alt="Kurtis" onerror="this.src='https://placehold.co/160x180/f0dfe3/6f4a55?text=Kurtis'">
-      <div><h3>🌸 Kurtis</h3><p>Easy everyday styles & affordable finds</p></div>
-      <span class="arrow">→</span>
-    </a>
+    <!-- ========================= -->
+    <!-- FEATURED PRODUCT -->
+    <!-- ========================= -->
 
-    <a class="card" href="#" target="_blank" rel="sponsored noopener">
-      <img class="thumb" src="product-4.jpg" alt="Office wear" onerror="this.src='https://placehold.co/160x180/f0dfe3/6f4a55?text=Office'">
-      <div><h3>💼 Office Wear</h3><p>Simple, polished looks for work</p></div>
-      <span class="arrow">→</span>
-    </a>
+    <section>
 
-    <a class="card" href="#" target="_blank" rel="sponsored noopener">
-      <img class="thumb" src="product-5.jpg" alt="Under 1000" onerror="this.src='https://placehold.co/160x180/f0dfe3/6f4a55?text=%E2%82%B91000'">
-      <div><h3>💸 Finds Under ₹1,000</h3><p>Budget-friendly pieces worth checking out</p></div>
-      <span class="arrow">→</span>
-    </a>
-  </section>
+      <div class="section-title">
+        🛍️ Today's Fashion Find
+      </div>
 
-  <p class="note">
-    <strong>Disclosure:</strong> As an Amazon Associate, I earn from qualifying purchases.
-    Prices and availability may change on Amazon.
-  </p>
-  <footer>Made with ♡ for MeherWearsStyles</footer>
-</main>
+
+      <!-- PRODUCT 1 -->
+
+      <a
+        class="card"
+        href="https://link.amazon/B018V4FVN"
+        target="_blank"
+        rel="sponsored noopener"
+      >
+
+        <img
+          class="thumb"
+          src="product-1.jpg"
+          alt="Featured fashion product"
+        >
+
+        <div class="card-content">
+
+          <span class="badge">
+            FEATURED
+          </span>
+
+          <h3>
+            Today's Fashion Pick
+          </h3>
+
+          <p>
+            Tap to check price & details on Amazon
+          </p>
+
+        </div>
+
+        <span class="arrow">
+          →
+        </span>
+
+      </a>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- SHOP MY PICKS -->
+    <!-- ========================= -->
+
+    <section>
+
+      <div class="section-title">
+        ✨ Shop My Picks
+      </div>
+
+
+      <!-- ========================= -->
+      <!-- PRODUCT 1 -->
+      <!-- ========================= -->
+
+      <a
+        class="card"
+        href="https://link.amazon/B018V4FVN"
+        target="_blank"
+        rel="sponsored noopener"
+      >
+
+        <img
+          class="thumb"
+          src="product-1.jpg"
+          alt="Fashion pick 1"
+        >
+
+        <div class="card-content">
+
+          <h3>
+            🌸 Fashion Pick #1
+          </h3>
+
+          <p>
+            Tap to view this find on Amazon
+          </p>
+
+        </div>
+
+        <span class="arrow">
+          →
+        </span>
+
+      </a>
+
+
+      <!-- ========================= -->
+      <!-- PRODUCT 2 -->
+      <!-- ========================= -->
+
+      <a
+        class="card"
+        href="https://link.amazon/B01LW6GjM"
+        target="_blank"
+        rel="sponsored noopener"
+      >
+
+        <img
+          class="thumb"
+          src="product-2.jpg"
+          alt="Fashion pick 2"
+        >
+
+        <div class="card-content">
+
+          <h3>
+            👗 Fashion Pick #2
+          </h3>
+
+          <p>
+            Tap to view this find on Amazon
+          </p>
+
+        </div>
+
+        <span class="arrow">
+          →
+        </span>
+
+      </a>
+
+
+      <!-- ========================= -->
+      <!-- PRODUCT 3 -->
+      <!-- ========================= -->
+
+      <a
+        class="card"
+        href="https://link.amazon/B0jbhCyqJ"
+        target="_blank"
+        rel="sponsored noopener"
+      >
+
+        <img
+          class="thumb"
+          src="product-3.jpg"
+          alt="Fashion pick 3"
+        >
+
+        <div class="card-content">
+
+          <h3>
+            ✨ Fashion Pick #3
+          </h3>
+
+          <p>
+            Tap to view this find on Amazon
+          </p>
+
+        </div>
+
+        <span class="arrow">
+          →
+        </span>
+
+      </a>
+
+
+      <!-- ========================= -->
+      <!-- PRODUCT 4 -->
+      <!-- ========================= -->
+
+      <a
+        class="card"
+        href="https://link.amazon/B0eQh7gN6"
+        target="_blank"
+        rel="sponsored noopener"
+      >
+
+        <img
+          class="thumb"
+          src="product-4.jpg"
+          alt="Fashion pick 4"
+        >
+
+        <div class="card-content">
+
+          <h3>
+            💕 Fashion Pick #4
+          </h3>
+
+          <p>
+            Tap to view this find on Amazon
+          </p>
+
+        </div>
+
+        <span class="arrow">
+          →
+        </span>
+
+      </a>
+
+    </section>
+
+
+    <!-- ========================= -->
+    <!-- AMAZON DISCLOSURE -->
+    <!-- ========================= -->
+
+    <p class="note">
+
+      <strong>
+        Disclosure:
+      </strong>
+
+      As an Amazon Associate, I earn from qualifying purchases.
+      Prices and availability may change on Amazon.
+
+    </p>
+
+
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
+    <footer>
+
+      Made with ♡ for MeherWearsStyles
+
+    </footer>
+
+  </main>
+
 </body>
 </html>
